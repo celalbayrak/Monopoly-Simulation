@@ -39,22 +39,11 @@ public class Monopoly {
             p.sellManagement();
             p.sellStationSquares();
         }
-        if(p.getMoney()<0) {
-            this.playerArr.remove(p);
-            for(int i=0;i<p.stationSquares.size();i++){
-                p.stationSquares.get(i).owner=null;
-            }
-            for(int j=0;j<p.provinceSquares.size();j++){
-                p.provinceSquares.get(j).owner=null;
-            }
-            for(int k=0;k<p.ManagementSquares.size();k++){
-                p.ManagementSquares.get(k).owner=null;
-            }
-            p.stationSquares.clear();
-            p.provinceSquares.clear();
-            p.ManagementSquares.clear();
+        if(p.getMoney()<0){
             System.out.println(p.getName() + " went bankrupt");
+            this.playerArr.remove(p);
         }
+
     }
 
     public void playGame(){

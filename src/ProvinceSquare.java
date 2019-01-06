@@ -19,6 +19,7 @@ public class ProvinceSquare extends Square {
             if(p.getMoney()>price){
                 p.giveMoney(price);
                 this.owner = p;
+                p.provinceSquares.add(this);
                 System.out.println("Now you are the owner of " + name+".It's price is: "+price+"$");
                 isPurchasable = false;
             }

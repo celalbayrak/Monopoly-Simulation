@@ -23,6 +23,7 @@ public class Player extends Person{
 			if (!(this.provinceSquares.isEmpty())) {
 				int salePrice = (this.provinceSquares.get(i).price) / 2;
 				System.out.println("You sold "+provinceSquares.get(i).name+" and you earn "+salePrice);
+				this.provinceSquares.get(i).owner=null;
 				this.provinceSquares.remove(i);
 				this.takeMoney(salePrice);
 				System.out.println("You have "+getMoney()+"$");
@@ -36,6 +37,7 @@ public class Player extends Person{
 			if (!(this.ManagementSquares.isEmpty())) {
 				int salePrice = (this.ManagementSquares.get(i).price) / 2;
 				System.out.println("You sold "+ManagementSquares.get(i).name+" and you earn "+salePrice);
+				this.ManagementSquares.get(i).owner=null;
 				this.ManagementSquares.remove(i);
 				this.takeMoney(salePrice);
 				System.out.println("You have "+getMoney()+"$");
@@ -49,6 +51,7 @@ public class Player extends Person{
 			if (!(this.stationSquares.isEmpty())) {
 				int salePrice = (this.stationSquares.get(i).price) / 2;
 				System.out.println("You sold "+stationSquares.get(i).name+" and you earn "+salePrice);
+				this.stationSquares.get(i).owner=null;
 				this.stationSquares.remove(i);
 				this.takeMoney(salePrice);
 				System.out.println("You have "+getMoney()+"$");

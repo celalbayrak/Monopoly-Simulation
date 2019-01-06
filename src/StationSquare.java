@@ -27,7 +27,7 @@ public class StationSquare extends Square {
             else
                 System.out.println("You don't have enough money to purchase " + name+".It's price is: "+price+"$");
         }
-        else if(this.owner!=null){
+        else if(this.owner!=null&& this.owner!=p){
             System.out.println(this.owner.name + " is owner of " + name);
             System.out.println("You have to give " + rent + "$ to " + owner.name);
             p.giveMoney(rent);
